@@ -1,0 +1,56 @@
+{
+    "name": "Kanhaiyanigam05/laravel-recaptcha",
+    "description": "Simple and painless Google reCAPTCHA package for Laravel framework",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "recaptcha",
+        "captcha",
+        "laravel",
+        "validation"
+    ],
+    "authors": [
+        {
+            "name": "kanhaiya"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.2",
+        "illuminate/routing": "^12.20.0",
+        "illuminate/support": "^12.20.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.4.0",
+        "phpunit/phpunit": "^12.2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kanhaiyanigam05\\ReCaptcha\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "kanhaiyanigam05\\ReCaptcha\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always"
+    },
+    "suggest": {
+        "Kanhaiyanigam05/laravel-authlog": "It allows to handle logged-in users and force log-out if needed"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kanhaiyanigam05\\ReCaptcha\\ReCaptchaServiceProvider"
+            ],
+            "aliases": {
+                "ReCaptcha": "Kanhaiyanigam05\\ReCaptcha\\Facades\\ReCaptcha"
+            }
+        }
+    }
+}
